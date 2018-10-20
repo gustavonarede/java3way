@@ -1,0 +1,55 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"      
+      xmlns:h="http://java.sun.com/jsf/html">
+	
+<h:head>
+	<title>Seus Favoritos</title>
+</h:head>
+<h:body>
+	<h:form id="favForm"> 
+	<h:panelGrid columns="3">
+		<h:outputText value="Nome Completo">
+		</h:outputText>
+		<h:inputText id="nomeCompleto" value="#{favorito.nomeCompleto}"
+			>
+		</h:inputText>
+		<h:message for="nomeCompleto" />
+		
+		<h:outputText value="Data de Nascimento">
+		</h:outputText>
+<!-- 		         //     <f:convertDateTime locale="pt,BR" dateStyle="long" pattern="dd/MM/yyyy HH:mm" /> -->
+		
+		<h:inputText id="dataNascimento" value="#{favorito.dataNascimento}"
+			>
+		</h:inputText>
+		<h:message for="dataNascimento" />
+		
+		<h:outputText value="Comida Favorita">
+		</h:outputText>
+		<h:inputText id="favoritoComida" value="#{favorito.comida}"
+			>
+		</h:inputText>
+		<h:message for="favoritoComida" />
+
+		<h:outputText value="Bebida FAvorita">
+		</h:outputText>
+		<h:inputText id="favoritoBebida" value="#{favorito.bebida}"
+			></h:inputText>
+		<h:message for="favoritoBebida" />
+
+
+		<h:outputText value="Esporte FAvorita">
+		</h:outputText>
+		<h:inputText id="favoritoEsporte" value="#{favorito.esporte}"
+			required="true"></h:inputText>
+		<h:message for="favoritoEsporte" />
+
+	</h:panelGrid>
+	<h:commandButton value="Ssalve seus favoritos" action="#{favorito.salvar}"/>
+	<h:commandButton value="REstaurar Padrão seus favoritos" actionListener="#{favorito.padrao}"/>
+	
+	 </h:form>
+</h:body>
+</html>
+
+
