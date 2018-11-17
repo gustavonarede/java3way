@@ -1,0 +1,9 @@
+git status 
+copia o arquivo
+git status 
+se tiver vermelho eh porque tem novo arquivo pra ser adicionado
+git add . server pra add os arquivos
+git status se ficou verde significa que foi adicionado
+depois git commit -m "mensagem"
+git status 
+git push -u origin master  
